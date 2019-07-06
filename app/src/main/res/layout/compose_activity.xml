@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/composeTweet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="What's on your mind?"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="10dp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/characterCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="280 characters left" />
+
+    <Button
+        android:id="@+id/post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/twitter_blue_50"
+        android:text="Post"
+        android:textColor="#FFF" />
+</LinearLayout>
