@@ -188,17 +188,20 @@ public class TimelineActivity extends AppCompatActivity {
                             hideProgressBar();
                         } catch (JSONException e) {
                             e.printStackTrace();
+                            hideProgressBar();
                         }
                     }
 
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
                         Log.d("TwitterClient", response.toString());
+                        hideProgressBar();
                     }
 
                     @Override
                     public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
                         Log.d("TwitterClient", responseString);
+                        hideProgressBar();
                         throwable.printStackTrace();
                     }
 
@@ -206,6 +209,7 @@ public class TimelineActivity extends AppCompatActivity {
                     public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONArray errorResponse) {
                         Log.d("TwitterClient", errorResponse.toString());
                         throwable.printStackTrace();
+                        hideProgressBar();
                     }
 
                     @Override
